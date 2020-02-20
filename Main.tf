@@ -1,5 +1,7 @@
 provider "aws" {
   region = var.regionas
+  access_key = "${var.aws_access_key}"
+  secret_key = "${var.aws_secret_key}"
 }
  
 module "ec2" {
