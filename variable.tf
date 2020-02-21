@@ -1,7 +1,7 @@
+variable "regionas" {
+}
 
-variable "regionas" {}
-
- variable "instancetype" {
-     default = "t2.micro"
+variable "instancetype" {
+  default = "t2.micro"
 }
 

@@ -1,10 +1,10 @@
 provider "aws" {
   region = var.regionas
 }
- 
+
 module "ec2" {
-  source = "./Modules/Ec2"
-  instanceyotype = "t2.micro"  
+  source         = "./Modules/Ec2"
+  instanceyotype = "t2.micro"
 }
 
 # module "autoscaling" {
@@ -31,21 +31,11 @@ module "ec2" {
 # }
 
 terraform {
-    backend "s3" {
-      bucket = "terrafrom-vv"
-      key = "terraforma"
-      region = "us-east-1"
-      dynamodb_table = "terraform-up-and-running-locks"
-    }
+  backend "s3" {
+    bucket         = "terrafrom-vv"
+    key            = "terraforma"
+    region         = "us-east-1"
+    dynamodb_table = "terraform-up-and-running-locks"
+  }
 }
-
-
-
-
-
-
-
-
-
-
 

@@ -25,7 +25,7 @@ resource "aws_instance" "ec2-server" {
     ]
   }
   tags = {
-    Name = "Jenkins-Server"
+    Name = "Jenkins-Server-terraform"
   }       
   }
 
