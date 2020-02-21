@@ -1,5 +1,5 @@
 resource "aws_instance" "ec2-server" {
-  ami           = "ami-09d069a04349dc3cb"
+  ami           = "ami-0c322300a1dd5dc79"
   instance_type = var.instanceyotype
   key_name      = "terraform-key"
   connection {
@@ -13,6 +13,7 @@ resource "aws_instance" "ec2-server" {
       "sudo pip install ansible",
       "sudo yum install java-1.8.0 -y",
       "sudo yum remove java-1.7.0-openjdk -y",
+      "sudo yum install wget -y"
       "sudo wget -O /etc/yum.repos.d/jenkins.repo http://pkg.jenkins-ci.org/redhat/jenkins.repo",
       "sudo rpm --import http://pkg.jenkins-ci.org/redhat/jenkins-ci.org.key",
       "sudo yum install jenkins -y",
@@ -21,7 +22,7 @@ resource "aws_instance" "ec2-server" {
     ]
   }
   tags = {
-    Name = "terraform-server1"
+    Name = "Jenkins-Server"
   }       
   }
 

@@ -1,7 +1,7 @@
 provider "aws" {
   region = var.regionas
-  access_key = "${var.aws_access_key}"
-  secret_key = "${var.aws_secret_key}"
+  access_key = "AKIA6IN4GMZVT6T7LA65"
+  secret_key = "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"
 }
  
 module "ec2" {
@@ -34,6 +34,8 @@ module "ec2" {
 
 terraform {
     backend "s3" {
+      access_key = "AKIA6IN4GMZVT6T7LA65"
+      secret_key = "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"
       bucket = "terrafrom-vv"
       key = "terraforma"
       region = "us-east-1"
