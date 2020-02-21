@@ -20,7 +20,8 @@ resource "aws_instance" "ec2-server" {
       "sudo service jenkins start",
       "sudo chkconfig --add jenkins",
       "sudo wget https://releases.hashicorp.com/terraform/0.12.21/terraform_0.12.21_linux_amd64.zip",
-      "sudo unzip ./terraform_0.12.21_linux_amd64.zip –d /usr/bin"
+      "sudo unzip /home/ec2-user/terraform_0.12.21_linux_amd64.zip",
+      "sudo mv /home/ec2-user/terraform /usr/bin"
     ]
   }
   tags = {
