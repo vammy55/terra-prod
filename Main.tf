@@ -1,9 +1,9 @@
 provider "aws" {
   region = var.regionas
-  assume_role {
-    role_arn = "arn:aws:iam::980184098411:role/ec2-admin"
-    session_name = "test"
-  }
+  # assume_role {
+  #   role_arn = "arn:aws:iam::980184098411:instance-profile/ec2-admin"
+  #   session_name = "test"
+  # }
 }
 
 module "ec2" {
